@@ -16,12 +16,12 @@ export const HeaderStyle = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 72px;
-    padding: 0 40px;
+    height: 80px;
   }
 
   .logo {
-    max-width: 167px;
+    max-width: 252px;
+    width: 100%;
     margin-right: 24px;
     display: block;
     cursor: pointer;
@@ -52,12 +52,10 @@ export const HeaderStyle = styled.header`
       > li {
         cursor: pointer;
         line-height: 1;
-        font-size: ${({ theme }) => theme.font.size.subheading2};
         position: relative;
         font-family: ${({ theme }) => theme.font.secondary};
-        color: ${({ theme }) => theme.colors.black};
-        letter-spacing: 0.06em;
-        font-weight: 400;
+        letter-spacing: 0.03em;
+        font-weight: 500;
 
         &:after {
           content: "";
@@ -100,7 +98,7 @@ export const HeaderStyle = styled.header`
       margin-left: 8px;}
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
     height: auto;
     background-color: ${({ theme }) => theme.colors.black};
 
@@ -122,7 +120,7 @@ export const HeaderStyle = styled.header`
 
     &.open {
       .header-nav {
-        height: calc(100% - 72px);
+        height: calc(100% - 80px);
       }
     }
     .social {
@@ -131,7 +129,7 @@ export const HeaderStyle = styled.header`
 
     .header-nav {
       position: fixed;
-      top: 72px;
+      top: 80px;
       right: 0;
       bottom: 0;
       left: 0;
@@ -139,13 +137,13 @@ export const HeaderStyle = styled.header`
       z-index: 100;
       height: 0;
       transition: height 0.5s;
-      background-color: ${({ theme }) => theme.colors.white};
+      background-color: ${({ theme }) => theme.colors.black};
 
       .header-nav-inner {
         flex-direction: column;
         align-items: inherit;
         justify-content: space-between;
-        height: calc(100vh - 72px);
+        height: calc(100vh - 80px);
         padding-top: 40px;
       }
 
@@ -156,9 +154,8 @@ export const HeaderStyle = styled.header`
 
         > li {
           margin-right: 0;
-          font-size: ${({ theme }) => theme.font.size.h2};
+          font-size: ${({ theme }) => theme.font.size.h2.base};
           width: 100%;
-          color: ${({ theme }) => theme.colors.darkText};
 
           &:not(:first-child) {
             margin-top: 24px;

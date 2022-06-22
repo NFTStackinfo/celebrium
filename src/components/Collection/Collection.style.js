@@ -25,3 +25,28 @@ export const CollectionStyle = styled.section`
     }
   }
 `
+export const CollectionItemStyle = styled.div`
+  max-width: 357px;
+  width: 100%;
+  text-align: left;
+
+  img {
+    border-radius: 16px;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .name {
+    font-size: ${({theme}) => theme.font.size.s1};
+    margin-bottom: 16px;
+  }
+
+  .description {
+    margin-bottom: 16px;
+    opacity: .5;
+  }
+  .collection-btn {
+    width: 100%;
+    text-align: center;
+  }
+`

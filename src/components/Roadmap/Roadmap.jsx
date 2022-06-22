@@ -5,7 +5,7 @@ import { dataRoadmap } from './data-roadmap'
 
 const Roadmap = forwardRef((props, ref) => {
 	return (
-		<RoadmapStyle ref={ref} id="roadmap" className="wrapper">
+		<RoadmapStyle ref={ref} id="plan" className="wrapper">
 			<div className="container">
 				<h2 className="h1">ROADMAP</h2>
 

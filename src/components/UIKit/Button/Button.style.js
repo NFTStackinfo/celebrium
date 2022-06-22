@@ -11,6 +11,7 @@ export const ButtonStyle = styled.a`
   font-weight: 500;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   border-radius: 30px;
 
   .icon {

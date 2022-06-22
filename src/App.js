@@ -12,6 +12,7 @@ import About from "./components/About/About";
 import Carousel1 from './components/Carousel1/Carousel1'
 import Collection from './components/Collection/Collection'
 import HowItWorks from './components/HowItWorks/HowItWorks'
+import Pricing from './components/Pricing/Pricing'
 const scrollIntoView = require("scroll-into-view");
 
 function App() {
@@ -50,8 +51,8 @@ function App() {
     "#hero": heroRef,
     "#about": aboutRef,
     "#collection": collectionRef,
-    "#how-it-works": howItWorksRef,
-    "#roadmap": roadmapRef,
+    "#mint": howItWorksRef,
+    "#plan": roadmapRef,
     "#utilities": utilitiesRef,
     "#team": teamRef,
     "#faq": faqRef,
@@ -69,13 +70,14 @@ function App() {
       {/*<Preloader className={loading ? "" : "hide-loader"} />*/}
       {/*  for dynamic preloader*/}
       <Preloader onLoad={handleLoad} />
-      {/*<Header onLinkClick={handleScrollIntoView} />*/}
+      <Header onLinkClick={handleScrollIntoView} />
       <div className="main-wrapper">
         <Hero ref={heroRef} loading={loading} />
         <Carousel1 />
         <About ref={aboutRef} />
         <Collection ref={collectionRef}/>
         <HowItWorks ref={howItWorksRef}/>
+        <Pricing  />
         <Roadmap ref={roadmapRef} />
         <Team ref={teamRef} />
         <FAQ ref={faqRef} />

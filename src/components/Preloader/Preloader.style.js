@@ -10,7 +10,7 @@ export const LoaderStyle = styled.div`
   visibility: visible;
   opacity: 1;
   transition: .5s;
-  background-color: ${({ theme }) => theme.colors.lightGrey};
+  background-color: ${({ theme }) => theme.colors.black};
   font-family: ${({ theme }) => theme.font.secondary};
   &.hide-loader {
     opacity: 0;
@@ -19,37 +19,28 @@ export const LoaderStyle = styled.div`
 
   .content {
     text-align: center;
-  }
 
-
-  .percent {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 24px;
-
-    p {
-      font-size: ${({ theme }) => theme.font.size.subheading2};
-      width: 64px;
-      text-align: center;
+    img {
+      margin: 0 auto;
     }
   }
+
   .progress {
-    width: 370px;
-    height: 9px;
-    margin-top: 24px;
+    width: 200px;
+    height: 8px;
+    margin-top: 64px;
     border-radius: 100px;
-    background-color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors['light-black']};
 
 
     .progress-inner {
-      background-color: ${({ theme }) => theme.colors.darkText};
-      border-radius: 50px;
+      background: ${({ theme }) => theme.colors['gradient']};
+      border-radius: 8px;
       height: 100%;
       transition: .3s;
 
       &.box-shadow {
-        box-shadow: 0 0 0 1px ${({ theme }) => theme.colors.darkText};
+        box-shadow: 0 0 0 1px ${({ theme }) => theme.colors['light-black']};
       }
     }
   }

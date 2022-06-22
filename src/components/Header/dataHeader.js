@@ -1,37 +1,41 @@
 export const navList = [
   {
-    title: "ABOUT",
+    title: "About",
     to: "#about",
   },
   {
-    title: "UTILITIES",
-    to: "#utilities",
+    title: "Collection",
+    to: "#collection",
   },
   {
-    title: "ROADMAP",
-    to: "#roadmap",
+    title: "Mint",
+    to: "#mint",
   },
   {
-    title: "TEAM",
+    title: "Owner Benefits",
+    to: "#owner-benefits",
+  },
+  {
+    title: "Plan",
+    to: "#plan",
+  },
+  {
+    title: "Team",
     to: "#team",
   },
   {
-    title: "FAQ",
+    title: "FAQs",
     to: "#faq",
   },
 ];
 
 export const socialList = [
+  {
+    name: 'instagram',
+    url: '#'
+  },
     {
         name: 'twitter',
         url: '#'
-    },
-    {
-        name: 'instagram',
-        url: '#'
-    },
-    {
-        name: 'discord',
-        url: '#'
-    },
+    }
 ]

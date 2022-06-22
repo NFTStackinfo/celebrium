@@ -36,7 +36,7 @@ const Header = ({ onLinkClick }) => {
         <div className="header-content">
           <div className="logo-wrapper">
             <div className="logo" onClick={() => handleMenuLinkClick("#hero")}>
-              <img src="/logo.svg" alt="logo" />
+              <img src="/logo.png" alt="logo" />
               {/*<strong>LOGO</strong>*/}
             </div>
           </div>

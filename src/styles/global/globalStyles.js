@@ -121,7 +121,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .main-wrapper {
-    //padding-top: 72px;
+    padding-top: 80px;
   }
 
   //typography
@@ -242,6 +242,9 @@ export const GlobalStyle = createGlobalStyle`
       -webkit-text-fill-color: transparent;
       background-clip: text;
       text-fill-color: transparent;
+    }
+    &-center {
+      text-align: center;
     }
   }
 

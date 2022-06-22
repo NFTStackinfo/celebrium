@@ -3,7 +3,7 @@ import { HowItWorksStyle } from './HowItWorks.style'
 
 const HowItWorks = forwardRef((props, ref) => {
   return (
-    <HowItWorksStyle ref={ref} id="how-it-works">
+    <HowItWorksStyle ref={ref} id="mint">
       <div className="container-sm">
         <div className="content">
           <h3>HOW IT WORKS</h3>

@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react'
 import { CollectionStyle } from './Collection.style'
 import { Paragraph } from '../UIKit/Paragraph/Paragraph'
+import CollectionItem from "./CollectionItem"
 
 const Collection = forwardRef((props, ref) => {
   return (
@@ -47,6 +48,11 @@ const Collection = forwardRef((props, ref) => {
               The First 3 Official Celebrity NFTs of Web 3.0
             </p>
           </div>
+          <CollectionItem
+            img={'assets/collection/1.png'}
+            name='Doug E. Fresh'
+            description='Music Icon & Hall of Fame Inductee'
+          />
         </div>
       </div>
     </CollectionStyle>
