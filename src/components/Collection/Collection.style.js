@@ -24,9 +24,47 @@ export const CollectionStyle = styled.section`
       text-align: center;
     }
   }
+
+  .collection {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -12px;
+    padding-top: 32px;
+
+    &-item {
+      padding: 12px;
+      width: calc(100% / 3);
+    }
+
+    &.with-margin {
+      margin-bottom: 60px;
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+    .collection {
+      margin: -8px;
+
+      &-item {
+        padding: 8px;
+      }
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    .collection {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -8px;
+
+      &-item {
+        padding: 8px;
+        width: 100%;
+      }
+    }
+  }
 `
 export const CollectionItemStyle = styled.div`
-  max-width: 357px;
   width: 100%;
   text-align: left;
 

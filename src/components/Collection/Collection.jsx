@@ -2,6 +2,7 @@ import React, { forwardRef } from 'react'
 import { CollectionStyle } from './Collection.style'
 import { Paragraph } from '../UIKit/Paragraph/Paragraph'
 import CollectionItem from "./CollectionItem"
+import {collectionAlpha, collectionOmega} from './data';
 
 const Collection = forwardRef((props, ref) => {
   return (
@@ -48,11 +49,54 @@ const Collection = forwardRef((props, ref) => {
               The First 3 Official Celebrity NFTs of Web 3.0
             </p>
           </div>
-          <CollectionItem
-            img={'assets/collection/1.png'}
-            name='Doug E. Fresh'
-            description='Music Icon & Hall of Fame Inductee'
-          />
+          <ul className="collection with-margin">
+              {
+                collectionAlpha.map(({name, description, img, url}, index)=> {
+                  return (
+
+                    <li className="collection-item"
+                        key={index}>
+                    <CollectionItem
+                      img={img}
+                      name={name}
+                      description={description}
+                    />
+
+
+                    </li>
+                  )
+                })
+              }
+          </ul>
+
+          <div className="content">
+            <h5 className="text-gradient">
+              CELEBRIUM® GENESIS COLLECTION OMEGA
+            </h5>
+
+            <p>
+              Every Memo® in the Celebrium® Genesis Collection commemorates Celebrium’s accomplishment of being the first officially authorized celebrity NFT collection.
+            </p>
+          </div>
+          <ul className="collection">
+            {
+              collectionOmega.map(({name, description, img, url}, index)=> {
+                return (
+
+                  <li className="collection-item"
+                      key={index}>
+                    <CollectionItem
+                      img={img}
+                      name={name}
+                      description={description}
+                    />
+
+
+                  </li>
+                )
+              })
+            }
+          </ul>
         </div>
       </div>
     </CollectionStyle>
