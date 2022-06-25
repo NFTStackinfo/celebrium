@@ -6,7 +6,6 @@ export const ButtonStyle = styled.a`
   color: ${({ theme }) => theme.colors.white};
   transition: 0.3s;
   cursor: pointer;
-  text-transform: uppercase;
   font-size: ${({ theme }) => theme.font.size.s2};
   font-weight: 500;
   display: inline-flex;
@@ -22,6 +21,10 @@ export const ButtonStyle = styled.a`
     }
   }
 
+  &:disabled {
+    cursor: default;
+  }
+
   ${({ variant }) =>
     variant === 'primary' &&
     css`
@@ -29,7 +32,7 @@ export const ButtonStyle = styled.a`
       color: ${({ theme }) => theme.colors.black};
       background-color: ${({ theme }) => theme.colors.white};
 
-      &:hover {
+      &:hover:not(:disabled) {
         border: 1px solid ${({ theme }) => theme.colors.white};
         background-color: transparent;
         color: ${({ theme }) => theme.colors.white};
@@ -40,13 +43,27 @@ export const ButtonStyle = styled.a`
     css`
       border: 1px solid transparent;
       color: ${({ theme }) => theme.colors.black};
-      background-image: ${({ theme }) => theme.colors.gradient};
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
 
-      &:hover {
-        background-image: none;
-        border: 1px solid ${({ theme }) => theme.colors.white};
-        background-color: ${({ theme }) => theme.colors.white};
-        color: ${({ theme }) => theme.colors.black};
+      ::before, ::after {
+        content: "";
+        transition: 0.3s;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+
+      ::before {
+        background-image: ${({ theme }) => theme.colors.gradient};
+      }
+
+      &:hover:not(:disabled) {
+        ::after {
+          background-color: ${({ theme }) => theme.colors.white};
+        }
       }
     `}
   ${({ variant }) =>
@@ -55,7 +72,7 @@ export const ButtonStyle = styled.a`
       background-color: transparent;
       border: 1px solid ${({ theme }) => theme.colors.white};
 
-      &:hover {
+      &:hover:not(:disabled) {
         background-color: ${({ theme }) => theme.colors.white};
         color: ${({ theme }) => theme.colors.black};
 

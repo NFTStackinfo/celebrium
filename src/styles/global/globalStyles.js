@@ -121,7 +121,28 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .main-wrapper {
+    background-image: url("/assets/bg-img-right.png"), url("/assets/bg-img-left.png");
+    background-repeat: no-repeat;
+    background-position-y: 12%, 18.8%;
+    background-position-x: right, left;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+      background-image: url("/assets/bg-img-left.png");
+      background-position-y: 17%;
+      background-position-x: left;
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+      background-position-y: 11%;
+    }
+  }
+
+  .collection-wrapper {
     padding-top: 80px;
+
+    .back-wrapper {
+      margin-top: 60px;
+    }
   }
 
   //typography
@@ -217,14 +238,26 @@ export const GlobalStyle = createGlobalStyle`
 
   .container {
     max-width: 1200px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+        max-width: 1152px;
+    }
   }
 
   .container-md {
     max-width: 1010px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+        max-width: 962px;
+    }
   }
 
   .container-sm {
     max-width: 818px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+      max-width: 770px;
+    }
   }
   // components
 

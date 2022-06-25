@@ -11,6 +11,7 @@ const IconWrapperStyle = styled.a`
   align-items: center;
   justify-content: center;
   transition: 0.3s;
+  cursor: pointer;
 
   .icon {
     path {

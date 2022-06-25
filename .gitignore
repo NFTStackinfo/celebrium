@@ -8,6 +8,7 @@
 .idea
 package-lock.json
 yarn.lock
+public/assets/collection-view/videos
 
 # testing
 /coverage
