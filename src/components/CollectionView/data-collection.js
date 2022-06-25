@@ -60,7 +60,7 @@ export const dataCollection = {
       },
       video: [
         {
-          src: '/assets/collection-view/videos/alpha-1.mp4',
+          src: '/assets/collection-view/alpha-1.mp4',
           type: 'mp4'
         }
       ],
@@ -168,7 +168,7 @@ export const dataCollection = {
       },
       video: [
         {
-          src: '/assets/collection-view/videos/alpha-2.mp4',
+          src: '/assets/collection-view/alpha-2.mp4',
           type: 'mp4'
         }
       ],
@@ -322,7 +322,7 @@ export const dataCollection = {
       },
       video: [
         {
-          src: '/assets/collection-view/videos/alpha-3.mp4',
+          src: '/assets/collection-view/alpha-3.mp4',
           type: 'mp4'
         }
       ],
@@ -424,7 +424,7 @@ export const dataCollection = {
       },
       video: [
         {
-          src: '/assets/collection-view/videos/omega-1.mp4',
+          src: '/assets/collection-view/omega-1.mp4',
           type: 'mp4'
         }
       ],
@@ -518,7 +518,7 @@ export const dataCollection = {
       },
       video: [
         {
-          src: '/assets/collection-view/videos/omega-2.mp4',
+          src: '/assets/collection-view/omega-2.mp4',
           type: 'mp4'
         }
       ],
@@ -596,7 +596,7 @@ export const dataCollection = {
       },
       video: [
         {
-          src: '/assets/collection-view/videos/omega-3.mp4',
+          src: '/assets/collection-view/omega-3.mp4',
           type: 'mp4'
         }
       ],
@@ -696,7 +696,7 @@ export const dataCollection = {
       },
       video: [
         {
-          src: '/assets/collection-view/videos/omega-4.mp4',
+          src: '/assets/collection-view/omega-4.mp4',
           type: 'mp4'
         }
       ],
@@ -763,7 +763,7 @@ export const dataCollection = {
       },
       video: [
         {
-          src: '/assets/collection-view/videos/omega-5.mp4',
+          src: '/assets/collection-view/omega-5.mp4',
           type: 'mp4'
         }
       ],
