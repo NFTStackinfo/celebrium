@@ -46,10 +46,4 @@ export const ConnectButtonStyle = styled.div`
       }
     }
   }
-
-  .warn-text {
-    padding: 24px 0;
-    font-size: 16px;
-    color: ${({ theme }) => theme.colors.darkText};
-  }
 `

@@ -6,10 +6,13 @@ import { Button } from '../components/UIKit'
 import MintCard from '../components/CollectionView/MintCard/MintCard'
 import Content from '../components/CollectionView/Content/Content'
 import { dataCollection } from 'components/CollectionView/data-collection'
+import {clearState} from "../redux/blockchain/blockchainActions";
+import {useDispatch} from "react-redux";
 
 function CollectionView(props) {
   const { id } = useParams()
   const pageData = dataCollection[id]
+  const dispatch = useDispatch()
 
   useEffect(() => {
     window.scrollTo({ top: 0, });
@@ -25,7 +28,7 @@ function CollectionView(props) {
           <div className="container">
             <div className="content">
               <Link to="/">
-                <Button iconName="arrow-back" variant="secondary" >
+                <Button iconName="arrow-back" variant="secondary" onClick={() => dispatch(clearState())} >
                   Back
                 </Button>
               </Link>

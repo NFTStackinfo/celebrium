@@ -32,7 +32,6 @@ function Carousel1(props) {
   const handleSlidesCount = (e = null) => {
     const windowWidth = window.innerWidth;
     setSlidesPerView(+(windowWidth / (262+24)).toFixed(2))
-    console.log({ windowWidth });
   };
 
   useEffect(() => {

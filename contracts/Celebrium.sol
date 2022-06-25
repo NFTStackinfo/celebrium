@@ -1,4 +1,4 @@
-//
+// SPDX-License-Identifier: MIT
 // Made by: NFT Stack
 //          https://nftstack.info
 //
@@ -8,13 +8,15 @@ pragma solidity ^0.8.1;
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract NFTStackSmartContract is ERC721Enumerable, Ownable {
-  uint256 public mintPrice = 0.001 ether;
-  uint256 public preSaleMintPrice = 0.001 ether;
+contract Celebrium is ERC721Enumerable, Ownable {
+  uint256 public mintPrice = 0.0009 ether;
+  uint256 public preSaleMintPrice = 0.00009 ether;
+
+  uint256 public mintBreakPoint = 140;
 
   uint256 private reserveAtATime = 50;
   uint256 private reservedCount = 0;
-  uint256 private maxReserveCount = 200;
+  uint256 private maxReserveCount = 50;
 
   string _baseTokenURI;
 
@@ -22,12 +24,13 @@ contract NFTStackSmartContract is ERC721Enumerable, Ownable {
   bool public isPreSaleMintActive = false;
   bool public isClosedMintForever = false;
 
-  uint256 public maximumMintSupply = 10000;
-  uint256 public maximumAllowedTokensPerPurchase = 10;
-  uint256 public maximumAllowedTokensPerWallet = 10;
-  uint256 public allowListMaxMint = 10;
+  uint256 public maximumMintSupply = 500;
+  uint256 public maximumAllowedTokensPerPurchase = 500;
+  uint256 public maximumAllowedTokensPerWallet = 500;
+  uint256 public allowListMaxMint = 500;
 
-  address private OtherAddress = 0x9DbF14C79847D1566419dCddd5ad35DAf0382E05;
+  address private OtherAddress1 = 0x625b0a3F8cEe1e03760d7fc10Aa9336FBDcF0f86;
+  address private OtherAddress2 = 0x86D7a3a03F00a51fEE2D54C6231Ed38D9820CBe4;
 
   mapping(address => bool) private _allowList;
   mapping(address => uint256) private _allowListClaimed;
@@ -35,7 +38,7 @@ contract NFTStackSmartContract is ERC721Enumerable, Ownable {
   event AssetMinted(uint256 tokenId, address sender);
   event SaleActivation(bool isMintActive);
 
-  constructor(string memory baseURI) ERC721("NFTStack Smart Contract", "NFTSSC") {
+  constructor(string memory baseURI) ERC721("Celebrium Genesis Collection Alpha: Jenny McCarthy", "CELEBRIUM") {
     setBaseURI(baseURI);
   }
 
@@ -159,7 +162,7 @@ contract NFTStackSmartContract is ERC721Enumerable, Ownable {
     uint256 supply = totalSupply();
     uint256 i;
 
-    for (i = 0; i < reserveAtATime; i++) {
+    for (i = 1; i <= reserveAtATime; i++) {
       emit AssetMinted(supply + i, msg.sender);
       _safeMint(msg.sender, supply + i);
       reservedCount++;
@@ -167,34 +170,35 @@ contract NFTStackSmartContract is ERC721Enumerable, Ownable {
   }
 
   function reserveToCustomWallet(address _walletAddress, uint256 _count) public onlyAuthorized {
-    for (uint256 i = 0; i < _count; i++) {
-      emit AssetMinted(totalSupply(), _walletAddress);
+    require(reservedCount <= maxReserveCount, "Max Reserves taken already!");
+
+    uint256 supply = totalSupply();
+    uint256 i;
+
+    for (i = 1; i <= _count; i++) {
+      emit AssetMinted(supply + i, _walletAddress);
       _safeMint(_walletAddress, totalSupply());
     }
   }
 
-  function mint(address _to, uint256 _count) public payable saleIsOpen {
+  function mint(uint256 _count) public payable saleIsOpen {
     if (msg.sender != owner()) {
       require(isMintActive, "Sale is not active currently.");
     }
 
-    if(_to != owner()) {
-      require(balanceOf(_to) + _count <= maximumAllowedTokensPerWallet, "Max holding cap reached.");
-    }
-
     require(totalSupply() + _count <= maximumMintSupply, "Total supply exceeded.");
     require(totalSupply() <= maximumMintSupply, "Total supply spent.");
-    require(
-      _count <= maximumAllowedTokensPerPurchase,
-      "Exceeds maximum allowed tokens"
-    );
     require(!isClosedMintForever, "Mint Closed Forever");
 
     require(msg.value >= mintPrice * _count, "Insuffient ETH amount sent.");
 
+    if(totalSupply() + _count == mintBreakPoint) {
+      mintPrice = 0.001 ether;
+    }
+
     for (uint256 i = 0; i < _count; i++) {
-      emit AssetMinted(totalSupply(), _to);
-      _safeMint(_to, totalSupply());
+      emit AssetMinted(totalSupply(), msg.sender);
+      _mint(msg.sender, totalSupply());
     }
   }
 
@@ -210,7 +214,7 @@ contract NFTStackSmartContract is ERC721Enumerable, Ownable {
     for (uint256 i = 0; i < _count; i++) {
       _allowListClaimed[msg.sender] += 1;
       emit AssetMinted(totalSupply(), msg.sender);
-      _safeMint(msg.sender, totalSupply());
+      _mint(msg.sender, totalSupply());
     }
   }
 
@@ -226,7 +230,8 @@ contract NFTStackSmartContract is ERC721Enumerable, Ownable {
 
   function withdraw() external onlyAuthorized {
     uint balance = address(this).balance;
-    payable(OtherAddress).transfer(balance * 10000 / 10000);
+    payable(OtherAddress1).transfer(balance * 8000 / 10000);
+    payable(OtherAddress2).transfer(balance * 2000 / 10000);
     payable(owner()).transfer(balance * 0 / 10000);
   }
 }

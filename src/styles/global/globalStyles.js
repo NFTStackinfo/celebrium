@@ -308,5 +308,11 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
+  .warn-text {
+    padding: 24px 0;
+    font-size: 16px;
+    color: ${({ theme }) => theme.colors.darkText};
+  }
+
   ${({ theme }) => generateSpaceClassNames(theme.spaces)}
 `

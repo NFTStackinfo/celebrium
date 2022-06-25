@@ -6,6 +6,7 @@ import Fade from 'react-reveal/Fade'
 
 function MintCard(props) {
   const [paymentMethod, setPaymentMethod] = useState('')
+  window?.show_creatify_popup()
 
   return (
     <MintCardStyle>
@@ -48,7 +49,8 @@ function MintCard(props) {
                     <Button
                       variant="gold"
                       className="collection-btn-credit-card"
-                      disabled
+                      // disabled
+                      onClick={() =>window.show_creatify_popup()}
                     >
                       BUY WITH CREDIT CARD
                     </Button>
@@ -57,6 +59,7 @@ function MintCard(props) {
                   {paymentMethod == 'crypto' || paymentMethod == '' ? (
                     <div className="collection-btn-crypto">
                       <ConnectButton
+                        address={props.contractAddress}
                         onWalletConnect={() => setPaymentMethod('crypto')} />
                     </div>
                   ) : ''}

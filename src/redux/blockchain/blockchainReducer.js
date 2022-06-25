@@ -32,6 +32,11 @@ const blockchainReducer = (state = initialState, action) => {
         ...state,
         account: action.payload.account,
       };
+    case "CLEAR_STATE":
+      return {
+        loading: false,
+        ...initialState,
+      };
     default:
       return state;
   }

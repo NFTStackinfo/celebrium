@@ -10,7 +10,7 @@ const fixImpreciseNumber = (number) => {
   return (parseFloat(number.toPrecision(12)));
 }
 
-const ConnectButton = ({onWalletConnect = () => {}}) => {
+const ConnectButton = ({onWalletConnect = () => {}, address}) => {
   const [walletConnected, setWalletConnected] = useState(false)
   const [fallback, setFallback] = useState('')
   const [mintCount, setMintCount] = useState(1)
@@ -26,7 +26,6 @@ const ConnectButton = ({onWalletConnect = () => {}}) => {
 
   // uncomment if you need static maxMintCount
   // const maxMintCount = 5
-  console.log(blockchain)
 
   const errorMessages = [
     'Change network to Polygon.',
@@ -52,7 +51,6 @@ const ConnectButton = ({onWalletConnect = () => {}}) => {
       const isPreSaleMintActive = await blockchain.smartContract.methods.isPreSaleMintActive().call()
       const mintPrice = isMintActive ? await blockchain.smartContract.methods?.mintPrice().call() / 10 ** 18
         : isPreSaleMintActive ? await blockchain.smartContract.methods?.preSaleMintPrice().call() / 10 ** 18 : 0
-      console.log(mintPrice)
       dispatch(fetchData(blockchain.account));
       if (blockchain.account) {
         setWalletConnected(true)
@@ -89,9 +87,12 @@ const ConnectButton = ({onWalletConnect = () => {}}) => {
     const address = await blockchain.account
     const isWhitelisted = await blockchain.smartContract.methods.checkIfOnAllowList(address).call()
     const alreadyMintedCount = await blockchain.smartContract.methods.allowListClaimedBy(address).call()
-    const mint = isMintActive ? blockchain.smartContract.methods.mint(blockchain.account, _amount)
+
+
+    const mint = isMintActive ? blockchain.smartContract.methods.mint(_amount)
       : isPreSaleMintActive ? blockchain.smartContract.methods.preSaleMint(_amount)
         : null;
+
 
     if (mint) {
       const mintPrice = isMintActive ? await blockchain.smartContract.methods?.mintPrice().call() / 10 ** 18
@@ -101,7 +102,6 @@ const ConnectButton = ({onWalletConnect = () => {}}) => {
         return  blockchain.web3.utils.fromWei(result, "ether")
       })
       const roundedBalance = balance / 10 ** 18
-      console.log(fixImpreciseNumber(_amount * mintPrice))
       if(roundedBalance < fixImpreciseNumber(_amount * mintPrice)) {
         setLoading(false)
         return setFallback(`You don’t have enough funds to mint! Please, make sure to have ${fixImpreciseNumber(_amount * mintPrice)} MATIC + gas.`)
@@ -193,14 +193,14 @@ const ConnectButton = ({onWalletConnect = () => {}}) => {
           <Button
             onClick={e => {
               e.preventDefault();
-              dispatch(connect());
+              dispatch(connect(address));
               openMobileMetamask();
             }}
             variant="secondary"
           >
             BUY WITH CRYPTO
           </Button>
-          {/*{fallback && <p className="warn-text">{fallback}</p>}*/}
+          {fallback && <p className="warn-text">{fallback}</p>}
         </>
 
       )}
