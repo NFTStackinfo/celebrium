@@ -18,6 +18,12 @@ function CollectionView(props) {
     window.scrollTo({ top: 0, });
   }, [])
 
+  useEffect(() => {
+    return () => {
+      dispatch(clearState())
+    };
+  }, [])
+
 
   return (
     <>
@@ -28,7 +34,7 @@ function CollectionView(props) {
           <div className="container">
             <div className="content">
               <Link to="/">
-                <Button iconName="arrow-back" variant="secondary" onClick={() => dispatch(clearState())} >
+                <Button iconName="arrow-back" variant="secondary" >
                   Back
                 </Button>
               </Link>
