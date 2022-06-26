@@ -10,7 +10,7 @@ const fixImpreciseNumber = (number) => {
   return (parseFloat(number.toPrecision(12)));
 }
 
-const ConnectButton = ({onWalletConnect = () => {}, address}) => {
+const ConnectButton = ({onWalletConnect = () => {}, address, id}) => {
   const [walletConnected, setWalletConnected] = useState(false)
   const [fallback, setFallback] = useState('')
   const [mintCount, setMintCount] = useState(1)
@@ -41,7 +41,7 @@ const ConnectButton = ({onWalletConnect = () => {}, address}) => {
       setFallback(blockchain.errorMsg)
     }
     if(blockchain.errorMsg === metamaskError && !(isIOS || isAndroid)) {
-      window.location.replace('https://metamask.app.link/dapp/skypunk-legacy.netlify.app/')
+      window.location.replace(`https://metamask.app.link/dapp/celebrium.netlify.app/collection/${id}`)
     }
   }, [blockchain.errorMsg])
 
@@ -141,7 +141,7 @@ const ConnectButton = ({onWalletConnect = () => {}, address}) => {
       if (connectingMobile && !walletConnected && (isIOS || isAndroid)
         || blockchain.errorMsg === metamaskError) {
 
-        window.location.replace('https://metamask.app.link/dapp/skypunk-legacy.netlify.app/')
+        window.location.replace(`https://metamask.app.link/dapp/celebrium.netlify.app/collection/${id}`)
 
       }
     }

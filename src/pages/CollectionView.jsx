@@ -13,7 +13,7 @@ function CollectionView(props) {
   const { id } = useParams()
   const pageData = dataCollection[id]
   const dispatch = useDispatch()
-
+  
   useEffect(() => {
     window.scrollTo({ top: 0, });
   }, [])
@@ -42,7 +42,7 @@ function CollectionView(props) {
           </div>
         </div>
 
-        <MintCard {...pageData.mintCard} />
+        <MintCard id={id}{...pageData.mintCard} />
 
         <Content {...pageData.content}/>
 
