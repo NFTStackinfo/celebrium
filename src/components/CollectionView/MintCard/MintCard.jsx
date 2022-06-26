@@ -6,7 +6,6 @@ import Fade from 'react-reveal/Fade'
 
 function MintCard(props) {
   const [paymentMethod, setPaymentMethod] = useState('')
-  window?.show_creatify_popup()
   return (
     <MintCardStyle>
       <div className="container-sm">
