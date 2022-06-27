@@ -3,12 +3,15 @@ import { Carousel1Style } from './Carousel1.style'
 import { Carousel } from '../../UIKit'
 
 const images = [
-  '/assets/carousel/1.png', '/assets/carousel/1.png', '/assets/carousel/1.png',
-  '/assets/carousel/1.png', '/assets/carousel/1.png', '/assets/carousel/1.png',
-  '/assets/carousel/1.png', '/assets/carousel/1.png', '/assets/carousel/1.png',
-  '/assets/carousel/1.png', '/assets/carousel/1.png', '/assets/carousel/1.png',
-  '/assets/carousel/1.png', '/assets/carousel/1.png', '/assets/carousel/1.png',
-  '/assets/carousel/1.png', '/assets/carousel/1.png', '/assets/carousel/1.png',
+  '/assets/collection/alpha-1.jpg', '/assets/collection/alpha-2.jpg', '/assets/collection/alpha-3.jpg',
+  '/assets/collection/omega-1.jpg', '/assets/collection/omega-2.jpg', '/assets/collection/omega-3.jpg',
+  '/assets/collection/omega-4.jpg', '/assets/collection/omega-5.jpg',
+  '/assets/collection/alpha-1.jpg', '/assets/collection/alpha-2.jpg', '/assets/collection/alpha-3.jpg',
+  '/assets/collection/omega-1.jpg', '/assets/collection/omega-2.jpg', '/assets/collection/omega-3.jpg',
+  '/assets/collection/omega-4.jpg', '/assets/collection/omega-5.jpg',
+  '/assets/collection/alpha-1.jpg', '/assets/collection/alpha-2.jpg', '/assets/collection/alpha-3.jpg',
+  '/assets/collection/omega-1.jpg', '/assets/collection/omega-2.jpg', '/assets/collection/omega-3.jpg',
+  '/assets/collection/omega-4.jpg', '/assets/collection/omega-5.jpg',
 ]
 
 function Carousel1(props) {
@@ -31,7 +34,7 @@ function Carousel1(props) {
 
   const handleSlidesCount = (e = null) => {
     const windowWidth = window.innerWidth;
-    setSlidesPerView(+(windowWidth / (262+24)).toFixed(2))
+    setSlidesPerView(+(windowWidth / (192+24)).toFixed(2))
   };
 
   useEffect(() => {

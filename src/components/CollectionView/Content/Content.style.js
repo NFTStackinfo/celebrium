@@ -7,10 +7,12 @@ export const ContentStyle = styled.div`
 
   &__video {
     margin-bottom: 60px;
+    max-height: 415px;
 
     video {
       max-width: 100%;
       width: 100%;
+      max-height: 415px;
       display: block;
     }
   }
