@@ -9,8 +9,8 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract Celebrium is ERC721Enumerable, Ownable {
-  uint256 public mintPrice = 0.0009 ether;
-  uint256 public preSaleMintPrice = 0.00009 ether;
+  uint256 public mintPrice = 42 ether;
+  uint256 public preSaleMintPrice = 42 ether;
 
   uint256 public mintBreakPoint = 140;
 
@@ -193,7 +193,7 @@ contract Celebrium is ERC721Enumerable, Ownable {
     require(msg.value >= mintPrice * _count, "Insuffient ETH amount sent.");
 
     if(totalSupply() + _count == mintBreakPoint) {
-      mintPrice = 0.001 ether;
+      mintPrice = 58 ether;
     }
 
     for (uint256 i = 0; i < _count; i++) {
