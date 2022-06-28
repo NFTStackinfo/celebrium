@@ -3,11 +3,9 @@ import styled from 'styled-components'
 export const Carousel1Style = styled.div`
   .img-wrapper {
     max-width: 192px;
-    margin: 0 12px;
     border-radius: 16px;
     overflow: hidden;
     background-image: ${({ theme }) => theme.colors.gradient};
-    //padding: 2px;
     padding: 2px;
 
     img {
@@ -15,6 +13,16 @@ export const Carousel1Style = styled.div`
       width: 100%;
       border-radius: 16px;
       max-width: 100%;
+    }
+  }
+
+  .swiper.collection-carousel {
+    .swiper-slide {
+      max-width: 192px;
+    }
+
+    .swiper-wrapper {
+      transition-timing-function: linear;
     }
   }
 `

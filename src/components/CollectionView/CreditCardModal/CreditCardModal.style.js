@@ -6,28 +6,21 @@ export const CreditCardModalStyle = styled.div`
   background: rgba(0, 0, 0, 0.4);
   z-index: -1;
   opacity: 0;
+  overflow: auto;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 
   &.active {
     z-index: 100;
     opacity: 1;
   }
 
-  .container-xs {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-
-    transform: translate(-50%, -50%);
-  }
-
   .content {
     background-color: #FFFFFF;
     border-radius: 16px;
-    //max-width: 300px;
     width: 100%;
     padding: 16px 30px 0;
-    //padding: 24px;
-    overflow-y: scroll;
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -47,7 +40,6 @@ export const CreditCardModalStyle = styled.div`
     }
 
     .modal-body {
-      //margin-top: 24px;
       height: fit-content;
       align-self: center;
     }
