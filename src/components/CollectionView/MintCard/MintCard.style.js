@@ -20,6 +20,7 @@ export const MintCardStyle = styled.div`
       background-image: ${({ theme }) => theme.colors.gradient};
       //padding: 2px;
       padding: 1px;
+      height: fit-content;
 
       @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
           max-width: 356px;

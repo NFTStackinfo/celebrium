@@ -242,21 +242,26 @@ export const GlobalStyle = createGlobalStyle`
     @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
         max-width: 1152px;
     }
-  }
 
-  .container-md {
-    max-width: 1010px;
+    &-md {
+      max-width: 1010px;
 
-    @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+      @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
         max-width: 962px;
+      }
     }
-  }
 
-  .container-sm {
-    max-width: 818px;
+    &-sm {
+      max-width: 818px;
 
-    @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
-      max-width: 770px;
+      @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+        max-width: 770px;
+      }
+    }
+
+    &-xs {
+      max-width: 360px;
+      width: 100%;
     }
   }
   // components
@@ -291,7 +296,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
 
-  iframe {
+  body > iframe {
     pointer-events: none; /*for development*/
   }
 

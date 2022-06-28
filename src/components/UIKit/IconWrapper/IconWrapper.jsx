@@ -38,9 +38,9 @@ function IconWrapper({
       as={props.href ? 'a' : 'button'}
       {...props}
       className={className}
+      onClick={onClick}
     >
       <Icon
-        onClick={onClick}
         className={iconClassName}
         color={color}
         size={size}

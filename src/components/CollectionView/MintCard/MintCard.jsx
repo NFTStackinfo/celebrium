@@ -1,11 +1,15 @@
-import React, { useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { MintCardStyle } from './MintCard.style'
 import { Button } from '../../UIKit'
 import ConnectButton from '../../UIKit/ConnectButton/ConnectButton'
 import Fade from 'react-reveal/Fade'
+import CreditCardModal from '../CreditCardModal/CreditCardModal'
 
 function MintCard(props) {
   const [paymentMethod, setPaymentMethod] = useState('')
+  const [isModalActive, setIsModalActive] = useState(false)
+  const handleCreditCardModal = (state) => setIsModalActive(state)
+
   return (
     <MintCardStyle>
       <div className="container-sm">
@@ -48,11 +52,11 @@ function MintCard(props) {
                       variant="gold"
                       className="collection-btn-credit-card"
                       // disabled
-                      onClick={() =>window.show_creatify_popup()}
+                      onClick={() => setIsModalActive(true)}
                     >
                       BUY WITH CREDIT CARD
                     </Button>
-                  ) : ''}
+                    ) : ''}
 
                   {paymentMethod == 'crypto' || paymentMethod == '' ? (
                     <div className="collection-btn-crypto">
@@ -67,10 +71,11 @@ function MintCard(props) {
 
               <div className="s2 about">{props.about}</div>
             </Fade>
-
           </div>
         </div>
       </div>
+
+      <CreditCardModal isActive={isModalActive} onModalToggle={handleCreditCardModal}/>
     </MintCardStyle>
   )
 }
