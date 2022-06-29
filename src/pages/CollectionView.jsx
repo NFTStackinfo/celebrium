@@ -13,7 +13,7 @@ function CollectionView(props) {
   const { id } = useParams()
   const pageData = dataCollection[id]
   const dispatch = useDispatch()
-  
+
   useEffect(() => {
     window.scrollTo({ top: 0, });
   }, [])
@@ -33,11 +33,9 @@ function CollectionView(props) {
         <div className="back-wrapper">
           <div className="container">
             <div className="content">
-              <Link to="/">
-                <Button iconName="arrow-back" variant="secondary" >
+                <Button href='https://www.celebrium.com/genesis/#collection' iconName="arrow-back" variant="secondary" >
                   Back
                 </Button>
-              </Link>
             </div>
           </div>
         </div>

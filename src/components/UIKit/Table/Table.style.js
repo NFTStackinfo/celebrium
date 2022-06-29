@@ -49,6 +49,10 @@ export const TableWrapperStyle = styled.div`
         border-right: 1px solid ${({ theme }) => theme.colors.gold};
       }
 
+      &:nth-child(2) {
+        text-align: center !important;
+      }
+
 
 
       &:not(:first-child):not(:last-child) {

@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import LandingView from './pages/LandingView'
 import reportWebVitals from './reportWebVitals'
 import { ThemeProvider } from 'styled-components'
 import { theme } from './styles/global/theme'
@@ -17,7 +16,6 @@ ReactDOM.render(
         <GlobalStyle />
 
         <Routes>
-          <Route exact path="/" element={<LandingView />} />
           <Route exact path="/collection/:id" element={<CollectionView />} />
         </Routes>
       </ThemeProvider>

@@ -3,7 +3,7 @@ import React from 'react'
 export const dataCollection = {
   'alpha-1': {
     mintCard: {
-      contractAddress: '0x6daBc3bCB3d5fcd9b8fc7501444D556Db6887A29',
+      contractAddress: '0xf8ec2bf5359b2ea3b41710e5a4ef3d39488ed90f',
       img: '/assets/collection/alpha-1.jpg',
       name: 'Jenny McCarthy',
       description: 'Actor',
@@ -115,7 +115,7 @@ export const dataCollection = {
 
   'alpha-2': {
     mintCard: {
-      contractAddress: '0xf8be16fA41abC9C4fD7a3E46A5FD06ecB74315ad',
+      contractAddress: '0x5d0cacdd3bd2f9238eb952ea70e474291a405277',
       img: '/assets/collection/alpha-2.jpg',
       name: 'Doug E. Fresh',
       description: 'Music Icon',
@@ -274,7 +274,7 @@ export const dataCollection = {
 
   'alpha-3': {
     mintCard: {
-      contractAddress: '0xbF9Bb85728106e1c3a11f5da3815a9bA752CE471',
+      contractAddress: '0x788e6b36c411172779d01d442b4b7d9531202ada',
       img: '/assets/collection/alpha-3.jpg',
       name: 'Kevin Harrington',
       description: 'Original Shark Tank Shark',
@@ -378,7 +378,7 @@ export const dataCollection = {
 
   'omega-1': {
     mintCard: {
-      contractAddress: '0xc036ea40Ef16BE3b923BD9B71E4F2917b4B6396B',
+      contractAddress: '0x82c65a653f428fee71796e3f8898e9e017e0307b',
       img: '/assets/collection/omega-1.jpg',
       name: 'Sheriff Mark Lamb',
       description: 'Challenge Coin',
@@ -475,7 +475,7 @@ export const dataCollection = {
 
   'omega-2': {
     mintCard: {
-      contractAddress: '0x605ccef454b42Bff100DF1e5fD97eF373157e7f8',
+      contractAddress: '0x2ae425f0dc7adec30ac50f0eeaad790e8f254e58',
       img: '/assets/collection/omega-2.jpg',
       name: 'Don Mann',
       description: 'Hanging In There',
@@ -560,7 +560,7 @@ export const dataCollection = {
 
   'omega-3': {
     mintCard: {
-      contractAddress: '0x2264120A27Ec3eE7BaFd01355300CF2E056Fed0D',
+      contractAddress: '0xe26a4ecc6d9f247b349d1ad84fa8241fea4f274e',
       img: '/assets/collection/omega-3.jpg',
       name: 'Dr. Jenn has one question',
       description: 'Are you talking to me?',
@@ -653,7 +653,7 @@ export const dataCollection = {
 
   'omega-4': {
     mintCard: {
-      contractAddress: '0x903c8F42a6E4218c33001d04658601d8de6ac3eA',
+      contractAddress: '0x042d59f0c2fdca656b8f2bf9d73dbfca0fa77641',
       img: '/assets/collection/omega-4.jpg',
       name: 'Jesse Chinchar',
       description: 'Coaching Prodigy',
@@ -734,7 +734,7 @@ export const dataCollection = {
 
   'omega-5': {
     mintCard: {
-      contractAddress: '0x0De6c7E4df727F5B6C22292d364e6f6D9D37c11b',
+      contractAddress: '0x32ca2887e468487059af40cbc0b78dbb3aa2a8a6',
       img: '/assets/collection/omega-5.jpg',
       name: 'Super Dave Harrington',
       description: 'Hot Shot',

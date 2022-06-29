@@ -196,9 +196,12 @@ contract Celebrium is ERC721Enumerable, Ownable {
       mintPrice = 58 ether;
     }
 
-    for (uint256 i = 0; i < _count; i++) {
-      emit AssetMinted(totalSupply(), msg.sender);
-      _mint(msg.sender, totalSupply());
+    uint256 supply = totalSupply();
+    uint256 i;
+
+    for (i = 1; i <= _count; i++) {
+      emit AssetMinted(supply + i, msg.sender);
+      _safeMint(msg.sender, supply + i);
     }
   }
 

@@ -1,31 +1,31 @@
 export const navList = [
   {
     title: 'About',
-    to: '#about'
+    to: 'https://www.celebrium.com/genesis/#about'
   },
   {
     title: 'Collection',
-    to: '#collection'
+    to: 'https://www.celebrium.com/genesis/#collection'
   },
   {
-    title: 'Mint',
-    to: '#mint'
+    title: 'How it Works',
+    to: 'https://www.celebrium.com/genesis/#howitworks'
   },
   {
     title: 'Owner Benefits',
-    to: '#pricing'
+    to: 'https://www.celebrium.com/genesis/#benefits'
   },
   {
     title: 'Plan',
-    to: '#plan'
+    to: 'https://www.celebrium.com/genesis/#plan'
   },
   {
     title: 'Team',
-    to: '#team'
+    to: 'https://www.celebrium.com/genesis/#team'
   },
   {
     title: 'FAQs',
-    to: '#faq'
+    to: 'https://www.celebrium.com/genesis/#FAQs'
   }
 ]
 

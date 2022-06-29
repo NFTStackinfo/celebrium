@@ -66,15 +66,15 @@ const Header = ({ onLinkClick }) => {
           <div className="logo-wrapper">
             {isMainPage ?
               (
-                <div className="logo" onClick={() => handleMenuLinkClick("#hero")}>
+                <a className="logo" href='https://www.celebrium.com/genesis/'>
                   <img src="/logo.png" alt="logo" />
-                </div>
+                </a>
               )
             : (
                 <div className="logo">
-                  <Link to="/#hero">
+                  <a href="https://www.celebrium.com/genesis/">
                     <img src="/logo.png" alt="logo" />
-                  </Link>
+                  </a>
                 </div>
               )}
           </div>
@@ -85,13 +85,16 @@ const Header = ({ onLinkClick }) => {
                   {navList.map(({ to, title }) => (
                     isMainPage ?
                       (
-                        <li key={to} onClick={() => handleMenuLinkClick(to)}>
-                          {title}
+                        <li key={to}>
+                          <a href={to}>
+                            {title}
+                          </a>
+
                         </li>
                       )
                       : (
                         <li key={to}>
-                          <Link to={`/${to}`}>{title}</Link>
+                          <a href={to}>{title}</a>
                         </li>
                       )
                   ))}
