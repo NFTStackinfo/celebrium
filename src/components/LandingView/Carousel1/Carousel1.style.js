@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Carousel1Style = styled.div`
   .img-wrapper {
     max-width: 192px;
-    border-radius: 16px;
+    border-radius: 9px;
     overflow: hidden;
     background-image: ${({ theme }) => theme.colors.gradient};
     padding: 2px;
@@ -11,7 +11,7 @@ export const Carousel1Style = styled.div`
     img {
       display: block;
       width: 100%;
-      border-radius: 16px;
+      border-radius: 9px;
       max-width: 100%;
     }
   }

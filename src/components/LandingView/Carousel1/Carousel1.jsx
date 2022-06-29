@@ -9,6 +9,9 @@ const images = [
   '/assets/collection/alpha-1.jpg', '/assets/collection/alpha-2.jpg', '/assets/collection/alpha-3.jpg',
   '/assets/collection/omega-1.jpg', '/assets/collection/omega-2.jpg', '/assets/collection/omega-3.jpg',
   '/assets/collection/omega-4.jpg', '/assets/collection/omega-5.jpg',
+  '/assets/collection/alpha-1.jpg', '/assets/collection/alpha-2.jpg', '/assets/collection/alpha-3.jpg',
+  '/assets/collection/omega-1.jpg', '/assets/collection/omega-2.jpg', '/assets/collection/omega-3.jpg',
+  '/assets/collection/omega-4.jpg', '/assets/collection/omega-5.jpg',
 ]
 
 function Carousel1(props) {
