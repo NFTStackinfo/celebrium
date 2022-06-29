@@ -59,12 +59,15 @@ export const dataCollection = {
           ]
         ]
       },
-      video: [
-        {
-          src: '/assets/collection-view/alpha-1.mp4',
-          type: 'mp4'
-        }
-      ],
+      video: {
+        poster: '/assets/collection-view/posters/alpha-1.jpeg',
+        files: [
+          {
+            src: '/assets/collection-view/alpha-1.mp4',
+            type: 'mp4'
+          }
+        ]
+      },
       text: [
         <p>
           Jenny McCarthy has been a prolific comedic actress in film and
@@ -168,12 +171,15 @@ export const dataCollection = {
           ]
         ]
       },
-      video: [
-        {
-          src: '/assets/collection-view/alpha-2.mp4',
-          type: 'mp4'
-        }
-      ],
+      video: {
+        poster: '/assets/collection-view/posters/alpha-2.jpeg',
+        files: [
+          {
+            src: '/assets/collection-view/alpha-2.mp4',
+            type: 'mp4'
+          }
+        ]
+      },
       text: [
         <p>
           Ever since his groundbreaking hits The Show and LaDi DaDi, legendary
@@ -323,12 +329,15 @@ export const dataCollection = {
           ]
         ]
       },
-      video: [
-        {
-          src: '/assets/collection-view/alpha-3.mp4',
-          type: 'mp4'
-        }
-      ],
+      video: {
+        poster: '/assets/collection-view/posters/alpha-3.jpeg',
+        files: [
+          {
+            src: '/assets/collection-view/alpha-3.mp4',
+            type: 'mp4'
+          }
+        ]
+      },
       text: [
         <p>
           An original “shark” on the hit TV show Shark Tank, creator of the
@@ -426,12 +435,15 @@ export const dataCollection = {
           ]
         ]
       },
-      video: [
-        {
-          src: '/assets/collection-view/omega-1.mp4',
-          type: 'mp4'
-        }
-      ],
+      video: {
+        poster: '/assets/collection-view/posters/omega-1.jpeg',
+        files: [
+          {
+            src: '/assets/collection-view/omega-1.mp4',
+            type: 'mp4'
+          }
+        ]
+      },
       text: [
         <p>
           Now, in partnership with Celebrium®, he’s bringing you a
@@ -521,12 +533,15 @@ export const dataCollection = {
           ]
         ]
       },
-      video: [
-        {
-          src: '/assets/collection-view/omega-2.mp4',
-          type: 'mp4'
-        }
-      ],
+      video: {
+        poster: '/assets/collection-view/posters/omega-2.jpeg',
+        files: [
+          {
+            src: '/assets/collection-view/omega-2.mp4',
+            type: 'mp4'
+          }
+        ]
+      },
       text: [
         <p>
           In addition to those jaw-dropping activities, Don Mann is also a
@@ -600,12 +615,15 @@ export const dataCollection = {
           ]
         ]
       },
-      video: [
-        {
-          src: '/assets/collection-view/omega-3.mp4',
-          type: 'mp4'
-        }
-      ],
+      video: {
+        poster: '/assets/collection-view/posters/omega-3.jpeg',
+        files: [
+          {
+            src: '/assets/collection-view/omega-3.mp4',
+            type: 'mp4'
+          }
+        ]
+      },
       text: [
         <p>
           An MD, attorney, 2-time military veteran, American Ninja Warrior
@@ -701,12 +719,15 @@ export const dataCollection = {
           ]
         ]
       },
-      video: [
-        {
-          src: '/assets/collection-view/omega-4.mp4',
-          type: 'mp4'
-        }
-      ],
+      video: {
+        poster: '/assets/collection-view/posters/omega-4.jpeg',
+        files: [
+          {
+            src: '/assets/collection-view/omega-4.mp4',
+            type: 'mp4'
+          }
+        ]
+      },
       text: []
     }
   },
@@ -769,12 +790,15 @@ export const dataCollection = {
           ]
         ]
       },
-      video: [
-        {
-          src: '/assets/collection-view/omega-5.mp4',
-          type: 'mp4'
-        }
-      ],
+      video: {
+        poster: '/assets/collection-view/posters/omega-5.jpeg',
+        files: [
+          {
+            src: '/assets/collection-view/omega-5.mp4',
+            type: 'mp4'
+          }
+        ]
+      },
       text: [
         <p>
           He’s “Super Dave” Harrington.

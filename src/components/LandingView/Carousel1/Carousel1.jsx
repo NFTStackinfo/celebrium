@@ -1,57 +1,45 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React  from 'react'
 import { Carousel1Style } from './Carousel1.style'
-import { Carousel } from '../../UIKit'
+
+import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
+import 'swiper/swiper-bundle.css';
+import { Autoplay } from 'swiper'
 
 const images = [
-  '/assets/carousel/1.png', '/assets/carousel/1.png', '/assets/carousel/1.png',
-  '/assets/carousel/1.png', '/assets/carousel/1.png', '/assets/carousel/1.png',
-  '/assets/carousel/1.png', '/assets/carousel/1.png', '/assets/carousel/1.png',
-  '/assets/carousel/1.png', '/assets/carousel/1.png', '/assets/carousel/1.png',
-  '/assets/carousel/1.png', '/assets/carousel/1.png', '/assets/carousel/1.png',
-  '/assets/carousel/1.png', '/assets/carousel/1.png', '/assets/carousel/1.png',
+  '/assets/collection/alpha-1.jpg', '/assets/collection/alpha-2.jpg', '/assets/collection/alpha-3.jpg',
+  '/assets/collection/omega-1.jpg', '/assets/collection/omega-2.jpg', '/assets/collection/omega-3.jpg',
+  '/assets/collection/omega-4.jpg', '/assets/collection/omega-5.jpg',
+  '/assets/collection/alpha-1.jpg', '/assets/collection/alpha-2.jpg', '/assets/collection/alpha-3.jpg',
+  '/assets/collection/omega-1.jpg', '/assets/collection/omega-2.jpg', '/assets/collection/omega-3.jpg',
+  '/assets/collection/omega-4.jpg', '/assets/collection/omega-5.jpg',
 ]
 
 function Carousel1(props) {
-  const [slidesPerView, setSlidesPerView] = useState(1);
-
-  const settings = useMemo(() => (
-  {
-    dots: false,
-    infinite: true,
-    arrows: false,
-    slidesToShow: slidesPerView,
-    slidesToScroll: 1,
-    autoplay: true,
-    pauseOnHover: false,
-    autoplaySpeed: 0,
-    speed: 3500,
-    cssEase: "linear",
-    rtl: true
-  }), [slidesPerView])
-
-  const handleSlidesCount = (e = null) => {
-    const windowWidth = window.innerWidth;
-    setSlidesPerView(+(windowWidth / (262+24)).toFixed(2))
-  };
-
-  useEffect(() => {
-    handleSlidesCount();
-    window.addEventListener("resize", handleSlidesCount);
-
-    return () => {
-      window.removeEventListener("resize", handleSlidesCount);
-    };
-  });
-
   return (
     <Carousel1Style>
-      <Carousel {...settings}>
+      <Swiper
+        slidesPerView={'auto'}
+        loop={true}
+        speed={4000}
+        spaceBetween={24}
+        autoplay={{
+          delay: 1,
+          enabled: true,
+          reverseDirection: true
+        }}
+        rewind={false}
+
+        modules={[Autoplay]}
+        className="collection-carousel"
+      >
         {images.map((image, index) => (
-          <div key={index} className="img-wrapper">
-            <img src={image} alt="celebrium" />
-          </div>
+          <SwiperSlide key={index}>
+            <div className="img-wrapper">
+              <img src={image} alt="celebrium" />
+            </div>
+          </SwiperSlide>
         ))}
-      </Carousel>
+      </Swiper>
     </Carousel1Style>
   )
 }

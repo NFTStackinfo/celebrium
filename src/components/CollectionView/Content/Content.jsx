@@ -8,8 +8,8 @@ function Content(props) {
       <div className="container-sm">
         <div className="content">
           <div className="content__video">
-            <video playsInline controls controlsList="nodownload">
-              {props.video.map(({ src, type }, idx) => (
+            <video playsInline controls controlsList="nodownload" poster={props.video.poster}>
+              {props.video.files.map(({ src, type }, idx) => (
                 <source src={src} type={`video/${type}`} key={`${type}_${idx}`}/>
               ))}
 
