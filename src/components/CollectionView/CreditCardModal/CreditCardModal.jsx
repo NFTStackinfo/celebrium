@@ -3,7 +3,7 @@ import { useLockedBody } from '../../../hooks/useLockedBody'
 import { CreditCardModalStyle } from './CreditCardModal.style'
 import IconWrapper from '../../UIKit/IconWrapper/IconWrapper'
 
-function CreditCardModal({ isActive, onModalToggle }) {
+function CreditCardModal({ isActive, onModalToggle, iframeSrc }) {
   const [locked, setLocked] = useLockedBody()
   const [isModalActive, setIsModalActive] = useState(false)
 
@@ -41,7 +41,7 @@ function CreditCardModal({ isActive, onModalToggle }) {
             <iframe
               height="550"
               style={{ border: 'none' }}
-              src="https://sandbox.nftpay.xyz/iframe/iframe_pay/91d18f08-114d-4480-b9bc-d27187b7f380"
+              src={iframeSrc}
             />
           </div>
         </div>
