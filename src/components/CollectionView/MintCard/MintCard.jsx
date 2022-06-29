@@ -75,7 +75,7 @@ function MintCard(props) {
         </div>
       </div>
 
-      <CreditCardModal isActive={isModalActive} onModalToggle={handleCreditCardModal}/>
+      <CreditCardModal isActive={isModalActive} onModalToggle={handleCreditCardModal} iframeSrc={props.iframeSrc}/>
     </MintCardStyle>
   )
 }

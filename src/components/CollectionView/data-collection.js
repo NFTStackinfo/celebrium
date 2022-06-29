@@ -10,7 +10,8 @@ export const dataCollection = {
       about: <p>Jenny’s gorgeous and fun Celebrium Memo features one of her
                 favorite looks and colors. And, as she says in her video below,
                 her sneakers give a loving shout-out to her talented husband
-                Donnie Wahlberg!</p>
+                Donnie Wahlberg!</p>,
+      iframeSrc: 'https://payments.nftpay.xyz/iframe/iframe_pay/d25ce02d-5bcd-43d6-8339-425fc2d63de3'
     },
     content: {
       table: {
@@ -122,7 +123,8 @@ export const dataCollection = {
       about: <p>Doug E. Fresh’s NFT Memo® gives a never-before-seen look at Doug
                 writing in the book he uses to craft lyrics and ideas. Check out
                 his Memo® Story video to hear the story behind this photo
-                directly from Doug himself.</p>
+                directly from Doug himself.</p>,
+      iframeSrc: 'https://payments.nftpay.xyz/iframe/iframe_pay/9f75f3ea-cd6d-4200-a05d-79be8781a4c9'
     },
     content: {
       table: {
@@ -280,7 +282,8 @@ export const dataCollection = {
       description: 'Original Shark Tank Shark',
       about: <p>Kevin’s Memo® takes you behind the scenes to the deal table of
                 one of his major business transactions; pictured here with his
-                son in “the room where it happens”.</p>
+                son in “the room where it happens”.</p>,
+      iframeSrc: 'https://payments.nftpay.xyz/iframe/iframe_pay/5d3069cf-703c-4889-8d86-97b6e726ce42'
     },
     content: {
       table: {
@@ -386,7 +389,8 @@ export const dataCollection = {
                 guest on Fox and OAN, a participant in A&E’s Live PD documentary
                 series, and co-founder of Protect America Now, Sheriff Lamb
                 helps educate Americans on what sheriffs and police do to help
-                protect our Constitution.</p>
+                protect our Constitution.</p>,
+      iframeSrc: 'https://payments.nftpay.xyz/iframe/iframe_pay/8b031719-c9d9-4752-bf99-a6169c95c993'
     },
     content: {
       table: {
@@ -484,7 +488,8 @@ export const dataCollection = {
                 others to do the same. Scaling a near vertical cliff? No
                 problem. Climbing Everest? Piece of cake. Training officials and
                 civilians to survive and escape capture in hostile territory?
-                All in a day’s work.</p>
+                All in a day’s work.</p>,
+      iframeSrc: 'https://payments.nftpay.xyz/iframe/iframe_pay/7118d7e6-66a6-4bd9-a2e3-f56c90c04cdf'
     },
     content: {
       table: {
@@ -566,7 +571,8 @@ export const dataCollection = {
       description: 'Are you talking to me?',
       about: <p>As the top female and a top 10 finisher of Surviving Mann Season
                 1, Dr. Jenn has proven to the world she's got what it takes to
-                go the distance and come out on top.</p>
+                go the distance and come out on top.</p>,
+      iframeSrc: 'https://payments.nftpay.xyz/iframe/iframe_pay/45f394ed-b5a7-4de0-8496-9e173dfce927'
     },
     content: {
       table: {
@@ -670,7 +676,8 @@ export const dataCollection = {
         >American Stories Network</a> and currently filming its
           second season.
         </p>
-      )
+      ),
+      iframeSrc: 'https://payments.nftpay.xyz/iframe/iframe_pay/2b981d1d-c32c-48de-8834-13a7dfa410ed'
     },
     content: {
       table: {
@@ -741,7 +748,8 @@ export const dataCollection = {
       about: <p>He’s trained some of the nation’s most elite counter-terrorism
                 fighters. He’s an expert infantryman, conventional and HALO
                 (high altitude, low open) paratrooper, ranger, and weapons craft
-                instructor.'</p>
+                instructor.'</p>,
+      iframeSrc: 'https://payments.nftpay.xyz/iframe/iframe_pay/452385ab-f08a-4d3f-848c-3bdc5ba492a5'
     },
     content: {
       table: {
