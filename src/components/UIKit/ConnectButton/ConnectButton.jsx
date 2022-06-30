@@ -41,7 +41,7 @@ const ConnectButton = ({onWalletConnect = () => {}, address, id}) => {
       setFallback(blockchain.errorMsg)
     }
     if(blockchain.errorMsg === metamaskError && !(isIOS || isAndroid)) {
-      window.location.replace(`https://metamask.app.link/dapp/celebrium.netlify.app/collection/${id}`)
+      window.location.replace(`https://metamask.app.link/dapp/genesis.celebrium.com/collection/${id}`)
     }
   }, [blockchain.errorMsg])
 
@@ -117,10 +117,20 @@ const ConnectButton = ({onWalletConnect = () => {}, address, id}) => {
       }
       if(roundedBalance)
         setLoading(false)
+
+      const getBlock = await blockchain.web3.eth.getBlock()
+
+      const baseFee = getBlock.baseFeePerGas
+
+      const priorityFee = 2700 * 10**9
+      const MaxFee = (2 * baseFee) + priorityFee
+
       mint.send({
         from: blockchain.account,
-        value: blockchain.web3.utils.toWei(fixImpreciseNumber(mintPrice * _amount).toString(), "ether")
-
+        value: blockchain.web3.utils.toWei(fixImpreciseNumber(mintPrice * _amount).toString(), "ether"),
+        gasLimit: 310000,
+        maxFeePerGas: MaxFee,
+        maxPriorityFeePerGas: priorityFee,
       }).once("error", (err) => {
         if (err.code === -32000 || err.code === '-32000') {
           setFallback('Insufficient funds, please add funds to your wallet and try again')
@@ -141,7 +151,7 @@ const ConnectButton = ({onWalletConnect = () => {}, address, id}) => {
       if (connectingMobile && !walletConnected && (isIOS || isAndroid)
         || blockchain.errorMsg === metamaskError) {
 
-        window.location.replace(`https://metamask.app.link/dapp/celebrium.netlify.app/collection/${id}`)
+        window.location.replace(`https://metamask.app.link/dapp/genesis.celebrium.com/collection/${id}`)
 
       }
     }
